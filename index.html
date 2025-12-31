@@ -159,6 +159,9 @@
       let statement = ``;
       let forecastDays = [];
       
+      if(!arr || arr.length===0){
+        document.querySelector(".forecast").style.display = "none";
+      }
       arr.forEach((item)=>{
         let date = new Date(item.dt * 1000).toLocaleDateString();
         if(!forecastDays.find(day => day.date === date)){
