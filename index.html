@@ -165,8 +165,9 @@
           forecastDays.push({date: date, data: item});
         }
       });
+      console.log(forecastDays)
 
-      forecastDays.slice(1, 8).forEach((day, index)=>{
+      forecastDays.slice(1, 7).forEach((day, index)=>{
         let iconSrc = "images/clear.png";
         if(day.data.weather[0].main == "Clouds"){
           iconSrc = "images/clouds.png";
